@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dsin</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url("https://images2.imgbox.com/65/00/MtxRaCr5_o.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-container {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            margin-top: 20vh;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 310px;
+            height: 415px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+
+        .login-container input[type="submit"] {
+            width: 80%;
+            height: 35px;
+            background-color: #ffe600;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #000000;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 130px;
+            position: absolute;
+            background: rgb(179, 179, 179);
+            background: linear-gradient(126deg, rgba(179, 179, 179, 1) 11%, rgba(255, 255, 255, 1) 50%, rgba(179, 179, 179, 1) 89%);
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 10px 15px;
+        }
+
+        .home {
+            margin: 20px;
+            background-image: url("https://images2.imgbox.com/eb/b6/aBLDP1ly_o.png");
+            background-repeat: no-repeat;
+            width: 305px;
+            height: 130px;
+            position: relative;
+            right: 0px;
+        }
+
+        .logo {
+            margin: 20px;
+            background-image: url("https://images2.imgbox.com/51/f5/iYkWQkdl_o.png");
+            background-repeat: no-repeat;
+            position: relative;
+            top: 25px;
+            width: 220px;
+            height: 100px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="logo">
+
+        </div>
+        <a href="./painel">
+            <div class="home" onclick="">
+            </div>
+        </a>
+    </div>
+
+    <!-- 
+    <div class="login-container">
+        <img src="https://images2.imgbox.com/a9/10/g7P2lSN2_o.png" alt="Semaforo" width="100px">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </div> -->
+
+
+
+    <form action='/login' method='POST' class="login-container">
+        <img src="https://images2.imgbox.com/5a/80/2aSayiNS_o.png" alt="Semaforo" width="100px">
+        <h2>Login</h2>
+
+
+        <input type='text' name='USERNAME' placeholder='Username'>
+
+
+        <input type='password' name='PASSWORD' placeholder='Password'>
+
+
+        <input type='submit' name='logar' value='Logar'>
+
+        <a href='/inline'> You also can go here</a>
+
+    </form>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Dsin</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            /* Evita rolagem desnecessária */
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-y: auto;
+            /* Adiciona barra de rolagem quando o conteúdo ultrapassa a altura */
+            padding-bottom: 50px;
+            /* Espaço para evitar que a barra de rolagem cubra o conteúdo */
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            /* Para posicionar a aba de informação */
+        }
+
+        .tab {
+            background-color: #ffd700;
+            padding: 10px;
+            color: #333;
+            margin-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .tab.active {
+            background-color: #cccccc;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: calc(100% + 20px);
+            /* Posiciona o conteúdo fora da tela */
+            transition: left 0.3s ease;
+            /* Animação de transição */
+            overflow-y: auto;
+        }
+
+        .tab-content.active {
+            left: 0;
+        }
+
+        iframe {
+            border: none;
+            width: calc(100% - 250px);
+            /* Ajustando a largura do iframe */
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="tab" onclick="changeTab(1)">Semáforo 1</div>
+        <div class="tab" onclick="changeTab(2)">Semáforo 2</div>
+        <div class="tab" onclick="changeTab(3)">Semáforo 3</div>
+    </div>
+    <div class="content">
+        <div id="tab1" class="tab-content">
+            <h2>Insights do Semáforo 1</h2>
+            <p>Aqui estão as informações do Semáforo 1.</p>
+            <p>Adicione suas informações aqui...</p>
+        </div>
+        <div id="tab2" class="tab-content">
+            <h2>Insights do Semáforo 2</h2>
+            <p>Aqui estão as informações do Semáforo 2.</p>
+            <p>Adicione suas informações aqui...</p>
+        </div>
+        <div id="tab3" class="tab-content">
+            <h2>Insights do Semáforo 3</h2>
+            <p>Aqui estão as informações do Semáforo 3.</p>
+            <p>Adicione suas informações aqui...</p>
+        </div>
+    </div>
+    <iframe src="https://7b15-2804-18-1940-ed7b-cc0d-40cc-4b2c-9744.ngrok-free.app/"></iframe>
+
+    <script>
+        function changeTab(tab) {
+            // Esconder todas as abas e remover a classe "active" delas
+            var tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+
+            // Adicionar a classe "active" à aba selecionada
+            var selectedTabContent = document.getElementById('tab' + tab);
+            selectedTabContent.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
