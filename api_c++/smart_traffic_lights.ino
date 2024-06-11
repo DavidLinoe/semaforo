@@ -71,6 +71,17 @@ void handleLogin() {
     Serial.println("Log in Failed");
   }
 
+// teste de rota 
+  if (server.hasArg("TIMER")) {
+    if (server.arg("TIMER") == "2") {
+      // server.sendHeader("Location", "/home1");
+      server.send(200);
+      Serial.println("Tempo Recebido Da Api");
+
+      return;
+    }
+  }
+
   index_html();
 
 }
